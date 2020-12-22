@@ -73,8 +73,8 @@
 //#define HW60_IS_MK3
 #define HW60_IS_MK4
 
-#define HW_SOURCE "hw_60.c"
-#define HW_HEADER "hw_60.h"
+//#define HW_SOURCE "hw_60.c"
+//#define HW_HEADER "hw_60.h"
 
 //#define HW_SOURCE "hw_r2.c"
 //#define HW_HEADER "hw_r2.h"
@@ -146,6 +146,9 @@
 //
 //#define HW_SOURCE "hw_stormcore_100s.c"
 //#define HW_HEADER "hw_stormcore_100s.h"
+
+#define HW_SOURCE "hw_ka160.c"
+#define HW_HEADER "hw_ka160.h"
 #endif
 
 #ifndef HW_SOURCE
@@ -172,6 +175,7 @@
 //#include			"mcconf_castle_2028.h"
 //#include			"mcconf_ellwee.h"
 //#include			"conf_test.h"
+#include			"A40-14L.h"
 
 /*
  * Select default user app configuration
@@ -179,6 +183,7 @@
 //#include			"appconf_example_ppm.h"
 //#include			"appconf_custom.h"
 //#include			"appconf_ellwee.h"
+#include			"KA160.h"
 
 /*
  * Set APP_CUSTOM_TO_USE to the name of the main C file of the custom application.

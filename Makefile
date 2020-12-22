@@ -12,7 +12,7 @@ endif
 
 # C specific options here (added to USE_OPT).
 ifeq ($(USE_COPT),)
-  USE_COPT = 
+  USE_COPT =
 endif
 
 # C++ specific options here (added to USE_OPT).
@@ -27,7 +27,7 @@ endif
 
 # Linker extra options here.
 ifeq ($(USE_LDOPT),)
-  USE_LDOPT = 
+  USE_LDOPT =
 endif
 
 # Enable this if you want link time optimizations (LTO)
@@ -281,7 +281,7 @@ ifeq ($(USE_FWLIB),yes)
   USE_OPT += -DUSE_STDPERIPH_DRIVER
 endif
 
-build/$(PROJECT).bin: build/$(PROJECT).elf 
+build/$(PROJECT).bin: build/$(PROJECT).elf
 	$(BIN) build/$(PROJECT).elf build/$(PROJECT).bin --gap-fill 0xFF
 
 # Program
@@ -301,7 +301,7 @@ upload-pi: build/$(PROJECT).bin
 	openocd -f pi_stm32.cfg -c "reset_config trst_only combined" -c "program build/$(PROJECT).elf verify reset exit"
 
 upload-pi-remote: build/$(PROJECT).elf
-	./upload_remote_pi build/$(PROJECT).elf ted 10.42.0.199 22
+	./upload_remote_pi build/$(PROJECT).elf ted 192.168.0.29 22
 
 debug-start:
 	openocd -f stm32-bv_openocd.cfg
